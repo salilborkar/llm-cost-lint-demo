@@ -1,0 +1,12 @@
+name: LLM Cost Lint
+on: [pull_request]
+jobs:
+  cost-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: salilborkar/llm-cost-lint@v1
+        with:
+          path: "."
+          monthly-calls: 50000
+          cost-threshold: 500

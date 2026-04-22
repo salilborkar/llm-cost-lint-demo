@@ -8,3 +8,4 @@ def summarize(text: str) -> str:
         body='{"prompt": "' + text + '", "max_tokens": 500}'
     )
     return response["body"].read().decode()
+#for PR 2

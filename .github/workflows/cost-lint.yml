@@ -1,5 +1,10 @@
 name: LLM Cost Lint
 on: [pull_request]
+
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   cost-check:
     runs-on: ubuntu-latest
